@@ -70,7 +70,7 @@ if (!fs.existsSync(htmlOutputDir)) {
 
 
 // List with urls to test. External file or array.
-const siteListJson = require("../src/static/url/ESSENT.json");
+// const siteListJson = require("../src/static/url/ESSENT.json");
 const siteList = [
     // { site: "https://www.essent.nl/", name: "Essent.nl" },
     // { site: "https://www.essent.nl/klantenservice/", name: "Essent.nl/klantenservice" },
