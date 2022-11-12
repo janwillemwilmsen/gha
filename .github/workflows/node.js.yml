@@ -35,7 +35,7 @@ jobs:
       with:
         commit_message: 'Automated Change'
         # commit_options: '--no-verify --signoff'
-        file_pattern: '*.html src/*.js tests/*.js'
+        # file_pattern: '*.html src/*.js tests/*.js'
         repository: .
         # repository: 'testwebsite'
         push_options: '--force'
