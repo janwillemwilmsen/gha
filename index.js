@@ -278,7 +278,7 @@ const siteLoop = async() => {
 
             for (const url of filenameAxeArray) {
 
-                let localhtmlfile = `${process.cwd()}/axe-reports/` + url
+                let localhtmlfile = `file://${process.cwd()}/axe-reports/` + url
                 console.log('Process CWD + filename', localhtmlfile)
                 await page.waitForTimeout(500)
                 await page.goto(localhtmlfile);
