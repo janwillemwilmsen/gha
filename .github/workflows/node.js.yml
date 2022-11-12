@@ -31,3 +31,18 @@ jobs:
       run: npx playwright install --with-deps
     - run: npm run build --if-present
     - run: npm test
+    - uses: stefanzweifel/git-auto-commit-action@v4
+      with:
+      commit_message: Automated Change
+      commit_options: '--no-verify --signoff'
+      file_pattern: '*.html src/*.js tests/*.js'
+      # repository: .
+      repository: 'testwebsite'
+
+      push_options: '--force'
+      skip_fetch: true
+      disable_globbing: true
+      create_branch: false
+
+
+
