@@ -284,10 +284,10 @@ const siteLoop = async() => {
                 await page.waitForTimeout(500)
 
                 let axeErrPage = await page.evaluate(() => document.querySelector('body > div > h5 > span').innerHTML);
-                axeErrPage = Number.parseFloat(axeErrPage)
-                    // console.log('Typeof errorcount', axeErrPage)
-                    // console.log('Typeof errorcount', typeof axeErrPage)
-                sumErrors.push(axeErrPage)
+                // axeErrPage = Number.parseFloat(axeErrPage)
+                // console.log('Typeof errorcount', axeErrPage)
+                // console.log('Typeof errorcount', typeof axeErrPage)
+                // sumErrors.push(axeErrPage)
                 const siteNamePage = await page.evaluate(() => document.querySelector('body > div > div.summarySection > div > a').getAttribute('href'))
                 const htmlTable = `<tr><td>  ${siteNamePage}</td><td>   ${axeErrPage}</td></tr>`
 
