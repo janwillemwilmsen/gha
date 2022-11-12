@@ -2,6 +2,7 @@
     "name": "testing",
     "version": "1.0.0",
     "description": "\"# testing\"",
+    "type": "module",
     "source": "src/index.html",
     "scripts": {
         "test": "node index"
