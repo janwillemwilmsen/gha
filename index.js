@@ -140,7 +140,7 @@ const siteLoop = async() => {
 
         for (const url of siteList) {
 
-            const browser = await chromium.launch({ headless: false });
+            const browser = await chromium.launch({ headless: true });
             const context = await browser.newContext({});
 
             const page = await context.newPage();
@@ -272,7 +272,7 @@ const siteLoop = async() => {
 
 
         async function main() {
-            const browser = await chromium.launch({ headless: false, slowMo: 250 });
+            const browser = await chromium.launch({ headless: true, slowMo: 250 });
             const page = await browser.newPage();
 
             for (const url of filenameAxeArray) {
