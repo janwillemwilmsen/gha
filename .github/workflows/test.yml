@@ -1,4 +1,4 @@
-name: Node.js CI jww
+name: Node.js CI JWW
 on:
   push:
     branches: [ $default-branch ]
