@@ -36,8 +36,8 @@ jobs:
         commit_message: 'Automated Change'
         # commit_options: '--no-verify --signoff'
         file_pattern: '*.html src/*.js tests/*.js'
-        # repository: .
-        repository: 'testwebsite'
+        repository: .
+        # repository: 'testwebsite'
         push_options: '--force'
         skip_fetch: true
         disable_globbing: true
