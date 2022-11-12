@@ -217,6 +217,7 @@ const siteLoop = async() => {
 
 
             const localFileName = dynamicName + '/' + htmlFolderName + '/' + slugDomain + '-axe-' + myDateTime + '.html'
+            console.log('Local filename DynamicNameHtmlFolderNameSluDomain-axe-etc', localFileName)
             filenameAxeArray.push(localFileName)
 
             // // Push List Items with html in Array :
@@ -278,16 +279,16 @@ const siteLoop = async() => {
             for (const url of filenameAxeArray) {
 
                 let localhtmlfile = `${process.cwd()}/axe-reports/` + url
-                console.log(localhtmlfile)
+                console.log('Process CWD + filename', localhtmlfile)
                 await page.waitForTimeout(500)
                 await page.goto(localhtmlfile);
                 await page.waitForTimeout(500)
 
                 let axeErrPage = await page.evaluate(() => document.querySelector('body > div > h5 > span').innerHTML);
-                // axeErrPage = Number.parseFloat(axeErrPage)
-                // console.log('Typeof errorcount', axeErrPage)
-                // console.log('Typeof errorcount', typeof axeErrPage)
-                // sumErrors.push(axeErrPage)
+                axeErrPage = Number.parseFloat(axeErrPage)
+                    // console.log('Typeof errorcount', axeErrPage)
+                    // console.log('Typeof errorcount', typeof axeErrPage)
+                sumErrors.push(axeErrPage)
                 const siteNamePage = await page.evaluate(() => document.querySelector('body > div > div.summarySection > div > a').getAttribute('href'))
                 const htmlTable = `<tr><td>  ${siteNamePage}</td><td>   ${axeErrPage}</td></tr>`
 
