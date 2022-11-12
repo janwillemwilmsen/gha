@@ -1,5 +1,16 @@
 {
-  "dependencies": {
-    "playwright": "^1.27.1"
-  }
+    "name": "testing",
+    "version": "1.0.0",
+    "description": "\"# testing\"",
+    "type": "module",
+    "source": "src/index.html",
+    "scripts": {
+        "test": "npm run index"
+    },
+    "author": "",
+    "license": "ISC",
+
+    "dependencies": {
+        "playwright": "^1.27.1"
+    }
 }
