@@ -1,4 +1,4 @@
-// @ts-check
+// @ts-checkasdadsasdas
 const playwright = require('playwright');
 
 (async() => {
