@@ -11,6 +11,7 @@
     "license": "ISC",
     "dependencies": {
         "axe-html-reporter": "^2.2.3",
-        "playwright": "^1.27.1"
+        "playwright": "^1.27.1",
+        "zip-local": "^0.3.5"
     }
 }
